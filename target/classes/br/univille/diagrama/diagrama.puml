@@ -1,0 +1,66 @@
+@startuml
+class Board {
+    Long id
+    String titulo
+    List<Lista> listas
+    --
+    + Long getId()
+    + void setId(Long id)
+    + String getTitulo()
+    + void setTitulo(String titulo)
+    + List<Lista> getListas()
+    + void setListas(List<Lista> listas)
+}
+
+class Lista {
+    Long id
+    String nome
+    Board board
+    List<Card> cards
+    --
+    + Long getId()
+    + void setId(Long id)
+    + String getNome()
+    + void setNome(String nome)
+    + Board getBoard()
+    + void setBoard(Board board)
+    + List<Card> getCards()
+    + void setCards(List<Card> cards)
+}
+
+class Card {
+    Long id
+    String titulo
+    String descricao
+    Lista lista
+    Cliente cliente
+    --
+    + Long getId()
+    + void setId(Long id)
+    + String getTitulo()
+    + void setTitulo(String titulo)
+    + String getDescricao()
+    + void setDescricao(String descricao)
+    + Lista getLista()
+    + void setLista(Lista lista)
+    + Cliente getCliente()
+    + void setCliente(Cliente cliente)
+}
+
+class Cliente {
+    String nome
+    String instagram
+    String persona
+    --
+    + String getNome()
+    + void setNome(String nome)
+    + String getInstagram()
+    + void setInstagram(String instagram)
+    + String getPersona()
+    + void setPersona(String persona)
+}
+
+Board "1" --> "0..*" Lista
+Lista "1" --> "0..*" Card
+Card "1" --> "1" Cliente
+@enduml
