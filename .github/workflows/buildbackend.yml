@@ -25,5 +25,5 @@ jobs:
       # Build and push Docker image to GitHub Container Registry
       - name: Build and Push Docker Image
         run: |
-          docker build -t ghcr.io/matheusmotta7777/trab-fabdesoft/projfabsoft:latest ./univille
+          docker build -t ghcr.io/matheusmotta7777/trab-fabdesoft/projfabsoft:latest .
           docker push ghcr.io/matheusmotta7777/trab-fabdesoft/projfabsoft:latest
