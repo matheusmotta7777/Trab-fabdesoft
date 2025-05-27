@@ -1,0 +1,20 @@
+<main class="container">
+    <h2>Clientes</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Persona</th>
+                <th>Instagram</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umCliente of listaClientes">
+                <td>`{{umCliente.nome}}</td>
+                <td>`{{umCliente.persona}}</td>
+                <td>`{{umCliente.instagram}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</main>
