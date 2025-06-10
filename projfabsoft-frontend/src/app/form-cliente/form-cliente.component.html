@@ -1,1 +1,30 @@
-<p>form-cliente works!</p>
+<main class="container">
+    <h2>Cliente</h2>
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="">Nome</label>
+                <input type="text"
+                    [(ngModel)]="cliente.nome"
+                class="form-control"
+                 id="">
+            </div>
+            <div class="form-group">
+                <label for="">Persona</label>
+                <input type="text"
+                    [(ngModel)]="cliente.persona"
+                class="form-control"
+                 id="">
+            </div>
+             <div class="form-group">
+                <label for="">Instagram</label>
+                <input type="text"
+                    [(ngModel)]="cliente.instagram"
+                class="form-control"
+                 id="">
+            </div>
+        </div>
+        <button (click)="salvar()"
+        class="btn btn-primary"> Salvar</button>
+    </div>
+</main>
