@@ -35,7 +35,7 @@ export class FormClienteComponent {
   salvar(){
     this.clienteService.saveCliente(this.cliente)
     .subscribe(resultado => {
-      this.router.navigate(['/clientes']);
+      this.router.navigate(['clientes']);
     });
   }
 

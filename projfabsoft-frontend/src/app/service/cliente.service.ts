@@ -14,7 +14,10 @@ export class ClienteService {
   }
 
   saveCliente(cliente: Cliente){
-    return this.http.post<Cliente>(this.apiURL, cliente);
+    if (cliente.id) {
+      return this.http.put<Cliente>(`${this.apiURL}/${cliente.id}`, cliente);
+    }
+
   }
 
   getClienteById(id: any){
