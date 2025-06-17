@@ -1,6 +1,6 @@
 <main class="container">
     <h2>Clientes</h2>
-    <a routerLink="/clientes/novo" class="btn btn-primary">Novo</a>
+    <a (click)="novo()" class="btn btn-primary">Novo</a>
     
     <table class="table">
         <thead>
@@ -8,6 +8,7 @@
                 <th>Nome</th>
                 <th>Persona</th>
                 <th>Instagram</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -15,6 +16,9 @@
                 <td>`{{umCliente.nome}}</td>
                 <td>`{{umCliente.persona}}</td>
                 <td>`{{umCliente.instagram}}</td>
+                <td>
+                    <td><a (click)="alterar(umCliente)"
+                    class="btn btn-warning">Editar</a></td>
             </tr>
         </tbody>
 
